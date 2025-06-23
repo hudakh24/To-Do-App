@@ -14,10 +14,10 @@ const Card = ({ title, index }) => {
   const { tasks, addTaskIsClicked } = useTaskContext();
 
   const shouldShowEmptyState =
-    isFirstCard && tasks.length === 0 && !addTaskIsClicked;
+    tasks.length === 0 && (!isFirstCard || (isFirstCard && !addTaskIsClicked));
 
   return (
-    <div className="min-w-[250px] bg-gray-50 rounded-xl border border-gray-200 shadow flex flex-col">
+    <div className="min-w-[280px] max-w-[280px]  bg-gray-50 rounded-xl border border-gray-200 shadow flex flex-col">
       {/* Header */}
       <div
         className={`flex m-2 items-center justify-between px-4 py-2 font-semibold rounded-xl ${color}`}

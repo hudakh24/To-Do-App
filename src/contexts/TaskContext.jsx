@@ -4,7 +4,7 @@ const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
   const [addTaskIsClicked, setAddTaskIsClicked] = useState(false);
-  const [tasks, setTasks] = useState([]); // 🟢 add tasks state here
+  const [tasks, setTasks] = useState([]);
 
   return (
     <TaskContext.Provider
